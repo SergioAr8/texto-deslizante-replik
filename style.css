@@ -1,0 +1,48 @@
+/* --- IMPORTANTE: Importar la fuente desde Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* --- Resto de los estilos --- */
+body {
+  margin: 0;
+  font-family: sans-serif; /* Fuente básica de respaldo */
+  box-sizing: border-box;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Color de fondo (¡Cámbialo si quieres!) */
+  padding: 14px 0;
+  border-top: 1px solid #ddd; /* Ejemplo de borde */
+  border-bottom: 1px solid #ddd; /* Ejemplo de borde */
+  box-sizing: border-box;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 28s linear infinite; /* Ajusta '30s' para velocidad */
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-right: 60px; /* Espacio entre repeticiones */
+
+  /* === ESTILOS ACTUALIZADOS === */
+  font-family: 'Playfair Display', serif; /* Fuente cambiada, con 'serif' como respaldo */
+  font-weight: 700; /* Peso Bold (Negrita). También puedes usar 'bold' */
+  font-size: 20px; /* Tamaño (Ajusta si es necesario) */
+  color: #000000; /* Color cambiado a negro */
+  /* =========================== */
+}
+
+/* Animación (sin cambios) */
+@keyframes marquee-scroll {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pausar al pasar el mouse (sin cambios) */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
